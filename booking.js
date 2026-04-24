@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 alert(`Thank you, ${guestName}!\nYour booking for ${finalHotel} is confirmed.\nA confirmation voucher will be sent to your email shortly.`);
                 
-                window.location.href = 'StayMitti.html';
+                window.location.href = 'index.html';
             } else {
                 alert("Oops! Something went wrong with the booking.");
             }
