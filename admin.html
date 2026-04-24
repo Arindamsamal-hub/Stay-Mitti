@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayMitti Admin - Add Resort</title>
+    <link rel="stylesheet" href="StayMitti.css">
+    <style>
+        .admin-container { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: var(--shadow-soft); }
+        .admin-container h2 { color: var(--primary-color); margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .submit-btn { background: var(--primary-color); color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1rem; width: 100%; }
+        .submit-btn:hover { background: #d6751c; }
+        .helper-text { font-size: 0.85rem; color: #777; margin-top: 3px; }
+    </style>
+</head>
+<body style="background-color: #f4f7f6;">
+    <nav>
+        <div class="logo"><a href="StayMitti.html" style="text-decoration: none; color: inherit;">Stay<span>Mitti</span> Admin</a></div>
+    </nav>
+
+    <div class="admin-container">
+        <h2><i class="fas fa-plus-circle"></i> Add a New Resort</h2>
+        <form id="addResortForm">
+            <div class="form-group">
+                <label>Resort Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" id="location" placeholder="e.g. Dindi, Andhra Pradesh" required>
+            </div>
+            <div style="display: flex; gap: 15px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Price per night (₹)</label>
+                    <input type="number" id="price" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Rating (1.0 to 5.0)</label>
+                    <input type="number" step="0.1" id="rating" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Category Tag</label>
+                    <select id="tag" required>
+                        <option value="Nature">Nature</option>
+                        <option value="Mountain">Mountain</option>
+                        <option value="Heritage">Heritage</option>
+                        <option value="Luxury">Luxury</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="description" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Amenities (Comma separated)</label>
+                <input type="text" id="amenities" placeholder="<i class='fas fa-wifi'></i> WiFi, <i class='fas fa-swimming-pool'></i> Pool" required>
+                <div class="helper-text">Separate each amenity with a comma. You can include FontAwesome icons!</div>
+            </div>
+
+            <div class="form-group">
+                <label>Image URLs (Comma separated)</label>
+                <textarea id="images" rows="2" placeholder="https://link-to-image1.jpg, https://link-to-image2.jpg" required></textarea>
+                <div class="helper-text">Paste the image links separated by commas (Needs at least 1, ideally 5 for the slider).</div>
+            </div>
+
+            <div style="display: flex; gap: 15px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Nearest Airport</label>
+                    <input type="text" id="airport" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Nearest Railway</label>
+                    <input type="text" id="railway" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Google Maps Embed URL</label>
+                <input type="text" id="mapUrl" placeholder="https://maps.google.com/..." required>
+            </div>
+
+            <button type="submit" class="submit-btn">Add Resort to Database</button>
+        </form>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

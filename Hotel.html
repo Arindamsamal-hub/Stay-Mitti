@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Details - StayMitti</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="StayMitti.css">
+    <link rel="stylesheet" href="hotel.css">
+    <script src="hotel.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="StayMitti.html" style="text-decoration: none; color: inherit;">Stay<span>Mitti</span></a></div>
+        <ul class="nav-links">
+            <li><a href="StayMiti.html#about-section">About Us</a></li>
+            <li><a href="StayMiti.html#hotels">Explore</a></li>
+        </ul>
+    </nav>
+
+    <div class="container details-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="" class="slide active" alt="Hotel View 1">
+                <img id="slide-2" src="" class="slide" alt="Hotel View 2">
+                <img id="slide-3" src="" class="slide" alt="Hotel View 3">
+                <img id="slide-4" src="" class="slide" alt="Hotel View 4">
+                <img id="slide-5" src="" class="slide" alt="Hotel View 5">
+            </div>
+            <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-details">
+                <h1 id="detail-title">Loading Details...</h1>
+                
+                <div class="hotel-meta">
+                    <span class="location" id="detail-location"><i class="fas fa-map-marker-alt"></i> Loading...</span>
+                </div>
+                
+                <div class="description">
+                    <h3>About this stay</h3>
+                    <p id="detail-description">Loading description...</p>
+                </div>
+
+                <div class="amenities">
+                    <h3>What this place offers</h3>
+                    <ul id="detail-amenities">
+                        </ul>
+                </div>
+
+                <div class="distances">
+                    <h3>Getting There</h3>
+                    <ul>
+                        <li id="detail-airport"><i class="fas fa-plane"></i> <strong>Nearest Airport:</strong> Loading...</li>
+                        <li id="detail-railway"><i class="fas fa-train"></i> <strong>Nearest Railway:</strong> Loading...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="booking-card">
+                    <div class="price">
+                        <h2><span id="detail-price">₹0</span><span> / night</span></h2>
+                        <p><i class="fas fa-info-circle"></i> Inclusive of taxes and fees</p>
+                    </div>
+                    <a href="booking.html" class="book-btn">Book Your Stay</a>
+                </div>
+
+                <div class="map-container">
+                    <h3>Location</h3>
+                    <iframe id="detail-map" src="" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>About StayMitti</h3>
+                <p>We are dedicated to connecting modern travelers with India's most soulful rural and heritage stays.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="StayMiti.html#about-section">About Us</a></li>
+                    <li><a href="StayMiti.html#services-section">Services</a></li>
+                    <li><a href="StayMiti.html#hotels">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@staymitti.com</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 StayMitti. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

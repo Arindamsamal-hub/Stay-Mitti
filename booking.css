@@ -1,0 +1,101 @@
+.booking-container {
+    max-width: 800px;
+    margin: 60px auto 4rem;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+}
+
+.booking-header h2 { color: var(--primary-color); margin-bottom: 0.5rem; font-size: 2rem; }
+.booking-header p { color: #666; font-size: 1.1rem; }
+
+.form-section { margin-bottom: 2.5rem; }
+.form-section h3 { margin-bottom: 1.5rem; color: var(--primary-color); border-left: 4px solid var(--accent-color); padding-left: 10px; }
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; /* Ensures they all fill their grid columns perfectly */
+    box-sizing: border-box; /* Includes padding and borders in the total size */
+    height: 52px; /* Forces inputs and the dropdown to be the exact same height */
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: white; /* Ensures the dropdown doesn't get a grey default background */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* We don't want the textarea for 'Special Requests' to be locked to 52px tall! */
+.form-group textarea {
+    height: auto;
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    display: none; 
+}
+
+.confirm-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-color), #e74c3c); 
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 6px 20px rgba(192,57,43,0.3);
+}
+
+.confirm-btn:hover { transform: translateY(-3px); }
+.confirm-btn:active { transform: translateY(-1px); }
+
+.secure-note {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .booking-container { padding: 1.5rem; margin-top: 40px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+}
